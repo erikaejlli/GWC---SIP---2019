@@ -23,12 +23,18 @@ while(i <= 20){
 function getTemp(){
   return 22.5;
 }
+var x = document.getElementsByTagName("body")[0]
+
+function colorfulBackground(){
+  x.setAttribute("style", `background-color:rgb(${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)})`)
+
+}
 
 
 var temperature = getTemp2();
 console.log(temperature);
 
-funtions getTemp2(type){
+function getTemp2(type){
   if (type == "c"){
     alert("omg whatttt");
     return 22.5;
@@ -41,3 +47,11 @@ funtions getTemp2(type){
 
 console.log(getTemp2("f"))
 console.log(getTemp2("c"))
+
+
+document.getElementById("wordBio").addEventListener("click",
+  function (){
+    alert("HELLO WORLD");
+    document.getElementById("wordBio").style.color = "green";
+  }
+)
